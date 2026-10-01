@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
         IMPORTANTE:
 
-        Sustituye 34TU_NUMERO por el número
+        Sustituye el número de abajo por el número
         del restaurante.
 
         Ejemplo:
@@ -327,6 +327,75 @@ Personas: ${personas}
             function (elemento) {
 
                 observer.observe(elemento);
+
+            }
+        );
+
+    }
+
+
+    /* ========================================
+       BOTÓN VOLVER ARRIBA
+    ======================================== */
+
+    const volverArriba =
+        document.getElementById("volver-arriba");
+
+
+    if (volverArriba) {
+
+        /*
+            Mostramos la flecha cuando el usuario
+            ha bajado más de 450 píxeles.
+        */
+
+        function actualizarBotonVolverArriba() {
+
+            if (window.scrollY > 450) {
+
+                volverArriba.classList.add("visible");
+
+            } else {
+
+                volverArriba.classList.remove("visible");
+
+            }
+
+        }
+
+
+        /*
+            Detectamos el desplazamiento
+            por la página.
+        */
+
+        window.addEventListener(
+            "scroll",
+            actualizarBotonVolverArriba,
+            { passive: true }
+        );
+
+
+        /*
+            Comprobamos la posición inicial.
+        */
+
+        actualizarBotonVolverArriba();
+
+
+        /*
+            Al pulsar la flecha volvemos
+            suavemente al principio.
+        */
+
+        volverArriba.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
             }
         );
