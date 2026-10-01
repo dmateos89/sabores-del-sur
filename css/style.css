@@ -377,6 +377,115 @@ header {
 
 
 /* ==================================================
+   LIGHTBOX GALERÍA
+================================================== */
+
+.galeria-grid img {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-contenido {
+    width: min(88vw, 1200px);
+    height: min(82vh, 800px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-contenido img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100% - 35px);
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.lightbox-contador {
+    margin-top: 12px;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.lightbox-cerrar,
+.lightbox-anterior,
+.lightbox-siguiente {
+    position: absolute;
+    border: none;
+    background: rgba(38, 53, 42, 0.85);
+    color: #d6ad60;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-cerrar:hover,
+.lightbox-anterior:hover,
+.lightbox-siguiente:hover {
+    background: #26352a;
+}
+
+.lightbox-cerrar {
+    top: 22px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.lightbox-anterior,
+.lightbox-siguiente {
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+}
+
+.lightbox-anterior {
+    left: 25px;
+}
+
+.lightbox-siguiente {
+    right: 25px;
+}
+
+.lightbox-anterior:hover,
+.lightbox-siguiente:hover {
+    transform: translateY(-50%) scale(1.06);
+}
+
+body.lightbox-abierto {
+    overflow: hidden;
+}
+
+
+/* ==================================================
    RESERVAS
 ================================================== */
 
@@ -1020,6 +1129,34 @@ footer {
         padding: 11px 14px;
 
         font-size: 0.9rem;
+    }
+
+    .lightbox-contenido {
+        width: 92vw;
+        height: 78vh;
+    }
+
+    .lightbox-cerrar {
+        top: 15px;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.7rem;
+    }
+
+    .lightbox-anterior,
+    .lightbox-siguiente {
+        width: 42px;
+        height: 42px;
+        font-size: 2rem;
+    }
+
+    .lightbox-anterior {
+        left: 8px;
+    }
+
+    .lightbox-siguiente {
+        right: 8px;
     }
 
 }

@@ -302,6 +302,47 @@
 
 
         <!-- =========================
+             LIGHTBOX GALERÍA
+        ========================== -->
+
+        <div
+            class="lightbox"
+            id="lightbox-galeria"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Galería de imágenes">
+
+            <button
+                type="button"
+                class="lightbox-cerrar"
+                id="lightbox-cerrar"
+                aria-label="Cerrar galería">×</button>
+
+            <button
+                type="button"
+                class="lightbox-anterior"
+                id="lightbox-anterior"
+                aria-label="Imagen anterior">‹</button>
+
+            <div class="lightbox-contenido">
+                <img
+                    id="lightbox-imagen"
+                    src=""
+                    alt="">
+                <p id="lightbox-contador" class="lightbox-contador"></p>
+            </div>
+
+            <button
+                type="button"
+                class="lightbox-siguiente"
+                id="lightbox-siguiente"
+                aria-label="Imagen siguiente">›</button>
+
+        </div>
+
+
+        <!-- =========================
              RESERVAS
         ========================== -->
 
