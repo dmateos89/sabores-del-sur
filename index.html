@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sabores del Sur | Restaurante</title>
+
+    <meta
+        name="description"
+        content="Sabores del Sur, cocina mediterránea elaborada con productos frescos y de calidad."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABECERA
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">
+                Sabores del Sur
+            </a>
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="nav-links">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             INICIO
+        ========================== -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    Cocina mediterránea
+                </p>
+
+                <h1>Sabores del Sur</h1>
+
+                <p>
+                    Tradición, producto fresco y una experiencia
+                    gastronómica para recordar.
+                </p>
+
+                <a href="#reservas" class="btn">
+                    Reservar mesa
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NOSOTROS
+        ========================== -->
+
+        <section id="nosotros">
+
+            <h2>Nuestra cocina</h2>
+
+            <p>
+                En Sabores del Sur combinamos recetas tradicionales
+                con una cocina moderna basada en productos frescos
+                y de temporada.
+            </p>
+
+            <p>
+                Nuestro objetivo es ofrecer una experiencia cercana
+                en un ambiente tranquilo y acogedor.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CARTA
+        ========================== -->
+
+        <section id="carta">
+
+            <h2>Nuestra carta</h2>
+
+            <div class="platos">
+
+                <article class="plato">
+
+                    <img
+                        src="img/ensalada.jpg"
+                        alt="Ensalada mediterránea"
+                    >
+
+                    <div class="plato-info">
+
+                        <h3>Ensalada mediterránea</h3>
+
+                        <p>
+                            Tomate, queso, aceitunas y productos frescos.
+                        </p>
+
+                        <strong>12,50 €</strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="plato">
+
+                    <img
+                        src="img/arroz.jpg"
+                        alt="Arroz de la casa"
+                    >
+
+                    <div class="plato-info">
+
+                        <h3>Arroz de la casa</h3>
+
+                        <p>
+                            Arroz preparado al momento con ingredientes
+                            seleccionados.
+                        </p>
+
+                        <strong>18,00 €</strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="plato">
+
+                    <img
+                        src="img/solomillo.jpg"
+                        alt="Solomillo"
+                    >
+
+                    <div class="plato-info">
+
+                        <h3>Solomillo</h3>
+
+                        <p>
+                            Solomillo acompañado de verduras y patatas.
+                        </p>
+
+                        <strong>22,50 €</strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="plato">
+
+                    <img
+                        src="img/tarta.jpg"
+                        alt="Tarta de queso"
+                    >
+
+                    <div class="plato-info">
+
+                        <h3>Tarta de queso</h3>
+
+                        <p>
+                            Nuestra tarta de queso cremosa casera.
+                        </p>
+
+                        <strong>6,50 €</strong>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GALERÍA
+        ========================== -->
+
+        <section id="galeria">
+
+            <h2>Una experiencia para disfrutar</h2>
+
+            <p class="galeria-intro">
+                Descubre nuestra cocina y el ambiente de Sabores del Sur.
+            </p>
+
+            <div class="galeria-grid">
+
+                <img
+                    src="img/galeria1.jpg"
+                    alt="Interior del restaurante"
+                    loading="lazy"
+                >
+
+                <img
+                    src="img/galeria2.jpg"
+                    alt="Cocina mediterránea"
+                    loading="lazy"
+                >
+
+                <img
+                    src="img/galeria3.jpg"
+                    alt="Ambiente de Sabores del Sur"
+                    loading="lazy"
+                >
+
+                <img
+                    src="img/galeria4.jpg"
+                    alt="Preparación de nuestros platos"
+                    loading="lazy"
+                >
+
+                <img
+                    src="img/galeria5.jpg"
+                    alt="Mesa preparada"
+                    loading="lazy"
+                >
+
+                <img
+                    src="img/galeria6.jpg"
+                    alt="Restaurante Sabores del Sur"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESERVAS
+        ========================== -->
+
+        <section id="reservas">
+
+            <h2>Reserva tu mesa</h2>
+
+            <form id="form-reserva">
+
+                <div>
+
+                    <label for="nombre">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="telefono">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="fecha">
+                        Fecha
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="hora">
+                        Hora
+                    </label>
+
+                    <input
+                        type="time"
+                        id="hora"
+                        name="hora"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="personas">
+                        Personas
+                    </label>
+
+                    <input
+                        type="number"
+                        id="personas"
+                        name="personas"
+                        min="1"
+                        max="20"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn">
+
+                    Solicitar reserva
+
+                </button>
+
+
+                <p class="aviso-reserva">
+                    La reserva quedará confirmada cuando el restaurante
+                    responda a tu solicitud por WhatsApp.
+                </p>
+
+            </form>
+
+        </section>
+
+
+       <!-- =========================
+     CONTACTO
+========================= -->
+
+<section id="contacto">
+
+    <h2>Visítanos</h2>
+
+    <p class="contacto-intro">
+        Ven a disfrutar de la cocina mediterránea
+        de Sabores del Sur.
+    </p>
+
+    <div class="contacto-container">
+
+        <!-- INFORMACIÓN -->
+
+        <div class="contacto-info">
+
+            <div class="contacto-item">
+
+                <span class="contacto-icono">📍</span>
+
+                <div>
+                    <h3>Dirección</h3>
+                    <p>Calle Ejemplo 25</p>
+                    <p>29001 Málaga</p>
+                </div>
+
+            </div>
+
+
+            <div class="contacto-item">
+
+                <span class="contacto-icono">📞</span>
+
+                <div>
+                    <h3>Teléfono</h3>
+                    <p>600 000 000</p>
+                </div>
+
+            </div>
+
+
+            <div class="contacto-item">
+
+                <span class="contacto-icono">✉️</span>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>reservas@saboresdelsur.es</p>
+                </div>
+
+            </div>
+
+
+            <div class="contacto-item">
+
+                <span class="contacto-icono">🕐</span>
+
+                <div>
+
+                    <h3>Horario</h3>
+
+                    <p>
+                        Martes - Domingo
+                    </p>
+
+                    <p>
+                        13:00 - 16:00
+                        <br>
+                        20:00 - 23:30
+                    </p>
+
+                    <p>
+                        Lunes cerrado
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAPA -->
+
+        <div class="contacto-mapa">
+
+            <iframe
+                src="https://www.google.com/maps?q=M%C3%A1laga%20Centro&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Sabores del Sur">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- =========================
+         WHATSAPP FLOTANTE
+    ========================== -->
+
+    <a
+        href="#"
+        class="whatsapp"
+        id="whatsapp-contacto"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp">
+
+        💬 WhatsApp
+
+    </a>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Sabores del Sur.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
