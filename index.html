@@ -362,6 +362,7 @@
                         type="text"
                         id="nombre"
                         name="nombre"
+                        autocomplete="name"
                         required
                     >
 
@@ -378,6 +379,8 @@
                         type="tel"
                         id="telefono"
                         name="telefono"
+                        autocomplete="tel"
+                        inputmode="tel"
                         required
                     >
 
@@ -491,7 +494,7 @@
 
                 <div>
                     <h3>Teléfono</h3>
-                    <p>600 000 000</p>
+                    <p><a class="contacto-enlace" href="tel:+34600000000">600 000 000</a></p>
                 </div>
 
             </div>
@@ -503,7 +506,7 @@
 
                 <div>
                     <h3>Email</h3>
-                    <p>reservas@saboresdelsur.es</p>
+                    <p><a class="contacto-enlace" href="mailto:reservas@saboresdelsur.es">reservas@saboresdelsur.es</a></p>
                 </div>
 
             </div>
@@ -604,7 +607,7 @@
 
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
 </body>
 

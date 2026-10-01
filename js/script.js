@@ -99,12 +99,64 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    /* CERRAR MENÚ CON ESC */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (
+            event.key === "Escape" &&
+            menuToggle &&
+            navLinks &&
+            navLinks.classList.contains("active")
+        ) {
+
+            navLinks.classList.remove("active");
+
+            menuToggle.textContent = "☰";
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.focus();
+
+        }
+
+    });
+
+
     /* ========================================
        FORMULARIO DE RESERVAS
     ======================================== */
 
     const formulario =
         document.getElementById("form-reserva");
+
+    const campoFecha =
+        document.getElementById("fecha");
+
+
+    /*
+        Impedimos seleccionar una fecha
+        anterior al día actual.
+    */
+
+    if (campoFecha) {
+
+        const hoy = new Date();
+
+        const zonaLocal = new Date(
+            hoy.getTime() -
+            hoy.getTimezoneOffset() * 60000
+        );
+
+        campoFecha.min =
+            zonaLocal
+                .toISOString()
+                .split("T")[0];
+
+    }
 
 
     if (formulario) {
@@ -305,11 +357,15 @@ Personas: ${personas}
 
             if (window.scrollY > 450) {
 
-                volverArriba.classList.add("visible");
+                volverArriba.classList.add(
+                    "visible"
+                );
 
             } else {
 
-                volverArriba.classList.remove("visible");
+                volverArriba.classList.remove(
+                    "visible"
+                );
 
             }
 
@@ -393,6 +449,8 @@ Personas: ${personas}
 
     let inicioToqueX = 0;
 
+    let elementoFocoAnterior = null;
+
 
     if (
         imagenesGaleria.length &&
@@ -438,6 +496,15 @@ Personas: ${personas}
         ==================================== */
 
         function abrirLightbox(indice) {
+
+            /*
+                Guardamos el elemento que tenía
+                el foco antes de abrir.
+            */
+
+            elementoFocoAnterior =
+                document.activeElement;
+
 
             mostrarImagen(indice);
 
@@ -487,6 +554,22 @@ Personas: ${personas}
             document.body.classList.remove(
                 "lightbox-abierto"
             );
+
+
+            /*
+                Devolvemos el foco a la fotografía
+                desde la que se abrió la galería.
+            */
+
+            if (
+                elementoFocoAnterior &&
+                typeof elementoFocoAnterior.focus ===
+                    "function"
+            ) {
+
+                elementoFocoAnterior.focus();
+
+            }
 
         }
 

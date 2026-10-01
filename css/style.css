@@ -1365,3 +1365,40 @@ footer {
     }
 }
 
+
+
+/* ==================================================
+   RESTAURANTE PRO v0.9.1 - MEJORAS NO VISUALES
+================================================== */
+
+.contacto-enlace {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contacto-enlace:hover,
+.contacto-enlace:focus-visible {
+    color: #d6ad60;
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.galeria-grid img:focus-visible {
+    outline: 3px solid #d6ad60;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
